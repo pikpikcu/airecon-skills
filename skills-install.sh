@@ -33,13 +33,49 @@ echo "  ╚═══════════════════════
 echo ""
 
 # ── Detect AIRecon installation ───────────────────────────────────────────────
+_detect_proxy_dir() {
+  # install.sh installs with /usr/bin/python3 --user, so prefer it first.
+  # Fall back to whatever 'python3' resolves to (covers pipx, venv, etc.).
+  local _detect='import airecon.proxy.system,os; print(os.path.dirname(airecon.proxy.system.__file__))'
+  local _dir=""
+
+  for _py in /usr/bin/python3 python3 python; do
+    if command -v "$_py" &>/dev/null; then
+      _dir=$("$_py" -c "$_detect" 2>/dev/null) && break
+    fi
+  done
+
+  echo "$_dir"
+}
+
 if [[ -n "$SKILLS_DIR_OVERRIDE" ]]; then
-  PROXY_DIR="$SKILLS_DIR_OVERRIDE/.."
-  SKILLS_DIR="$SKILLS_DIR_OVERRIDE"
+  PROXY_DIR="$(realpath "$SKILLS_DIR_OVERRIDE/..")"
+  SKILLS_DIR="$(realpath "$SKILLS_DIR_OVERRIDE")"
 else
   info "Detecting AIRecon installation..."
-  PROXY_DIR=$(python3 -c "import airecon.proxy.system; import os; print(os.path.dirname(airecon.proxy.system.__file__))" 2>/dev/null) || \
-    error "AIRecon is not installed. Install it first: pip install airecon"
+  PROXY_DIR=$(_detect_proxy_dir)
+
+  if [[ -z "$PROXY_DIR" ]]; then
+    echo ""
+    echo -e "  ${RED}AIRecon not found.${NC} Install it first:"
+    echo "    git clone https://github.com/pikpikcu/airecon && cd airecon && ./install.sh"
+    echo "  Or specify the path manually:"
+    echo "    ./skills-install.sh --skills-dir=/path/to/airecon/proxy/skills"
+    exit 1
+  fi
+
+  # Warn if path is inside a virtualenv — skills installed there won't be used
+  # by the system-wide 'airecon' command installed via install.sh.
+  if echo "$PROXY_DIR" | grep -qE "/(\.venv|venv|env|\.cache/pypoetry)/"; then
+    warn "Detected path is inside a virtual environment: $PROXY_DIR"
+    warn "Skills installed here may NOT be available to the system 'airecon' command."
+    warn "To install to the correct location, run outside any active venv:"
+    warn "  deactivate && ./skills-install.sh"
+    echo -ne "  Continue anyway? [y/N] "
+    read -r _ans
+    [[ "$_ans" =~ ^[Yy]$ ]] || exit 0
+  fi
+
   SKILLS_DIR="$PROXY_DIR/skills"
 fi
 
