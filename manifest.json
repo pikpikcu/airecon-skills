@@ -1,0 +1,51 @@
+{
+  "version": "1.0",
+  "description": "AIRecon community skills — keyword-to-skill mapping for auto-loading",
+  "skills": [
+    {
+      "path": "vulnerabilities/log4shell.md",
+      "keywords": [
+        "log4shell", "log4j", "jndi injection", "cve-2021-44228",
+        "log4j rce", "jndi ldap", "jndi rmi", "log4j2", "log4j exploit"
+      ]
+    },
+    {
+      "path": "protocols/vnc.md",
+      "keywords": [
+        "vnc", "virtual network computing", "vnc brute", "vnc exploit",
+        "rfb protocol", "vnc authentication bypass", "vnc scan"
+      ]
+    },
+    {
+      "path": "technologies/iot_firmware.md",
+      "keywords": [
+        "iot", "firmware", "firmware analysis", "embedded", "binwalk firmware",
+        "iot pentest", "router exploit", "firmware extraction", "qemu emulation",
+        "iot security", "embedded linux", "busybox", "upnp", "soho"
+      ]
+    },
+    {
+      "path": "ctf/web3.md",
+      "keywords": [
+        "web3", "blockchain", "smart contract", "solidity", "ethereum",
+        "reentrancy", "integer overflow solidity", "ctf blockchain",
+        "foundry exploit", "hardhat", "remix", "evm", "defi exploit",
+        "flash loan", "delegatecall", "selfdestruct"
+      ]
+    },
+    {
+      "path": "payloads/open_redirect.md",
+      "keywords": [
+        "open redirect payload", "redirect bypass", "url bypass",
+        "phishing redirect", "redirect chain", "javascript redirect bypass"
+      ]
+    },
+    {
+      "path": "reconnaissance/favicon_hash.md",
+      "keywords": [
+        "favicon hash", "favicon fingerprint", "shodan favicon",
+        "favicon.ico hash", "mmh3 hash", "favicons recon"
+      ]
+    }
+  ]
+}
