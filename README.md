@@ -3,7 +3,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/AIRecon-compatible-green.svg">
-  <img src="https://img.shields.io/badge/skills-6-blue.svg">
+  <img src="https://img.shields.io/badge/skills-18-blue.svg">
   <img src="https://img.shields.io/badge/LICENSE-MIT-red.svg">
 </p>
 
@@ -59,9 +59,21 @@ from `skills.json`. Does not affect AIRecon's built-in skills.
 | Skill | Category | Keywords |
 |-------|----------|---------|
 | `log4shell.md` | vulnerabilities | log4shell, log4j, jndi injection, CVE-2021-44228 |
+| `blind_xss.md` | vulnerabilities | blind xss, oob xss, xsshunter |
+| `prototype_pollution.md` | vulnerabilities | prototype pollution, __proto__, constructor.prototype |
+| `spring4shell.md` | vulnerabilities | spring4shell, CVE-2022-22965, tomcat jsp |
+| `ssrf_advanced_bypass.md` | vulnerabilities | ssrf bypass, metadata ssrf, dns rebinding |
 | `vnc.md` | protocols | vnc, rfb, vnc brute, vnc exploit |
+| `mssql.md` | protocols | mssql, sql server, xp_cmdshell, linked server |
+| `graphql_complex.md` | protocols | graphql, introspection, batching, persisted query |
 | `iot_firmware.md` | technologies | iot, firmware, binwalk, qemu emulation |
+| `aws_pentest.md` | technologies | aws pentest, iam, s3, ec2 metadata |
+| `cicd_attacks.md` | technologies | cicd, github actions, gitlab ci, jenkins |
+| `kubernetes_pentest.md` | technologies | kubernetes, k8s, kubelet, rbac |
+| `github_secrets.md` | technologies | github secrets, gitleaks, trufflehog, secret scanning |
 | `web3.md` | ctf | web3, blockchain, smart contract, reentrancy |
+| `active_directory_chain.md` | postexploit | active directory, bloodhound, kerberoasting, dcsync |
+| `credential_dumping.md` | postexploit | credential dumping, lsass, mimikatz, ntds |
 | `open_redirect.md` | payloads | open redirect payload, redirect bypass |
 | `favicon_hash.md` | reconnaissance | favicon hash, shodan favicon, mmh3 |
 

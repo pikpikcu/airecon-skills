@@ -1,51 +1,250 @@
 {
-  "version": "1.0",
-  "description": "AIRecon community skills — keyword-to-skill mapping for auto-loading",
-  "skills": [
-    {
-      "path": "vulnerabilities/log4shell.md",
-      "keywords": [
-        "log4shell", "log4j", "jndi injection", "cve-2021-44228",
-        "log4j rce", "jndi ldap", "jndi rmi", "log4j2", "log4j exploit"
-      ]
-    },
-    {
-      "path": "protocols/vnc.md",
-      "keywords": [
-        "vnc", "virtual network computing", "vnc brute", "vnc exploit",
-        "rfb protocol", "vnc authentication bypass", "vnc scan"
-      ]
-    },
-    {
-      "path": "technologies/iot_firmware.md",
-      "keywords": [
-        "iot", "firmware", "firmware analysis", "embedded", "binwalk firmware",
-        "iot pentest", "router exploit", "firmware extraction", "qemu emulation",
-        "iot security", "embedded linux", "busybox", "upnp", "soho"
-      ]
-    },
-    {
-      "path": "ctf/web3.md",
-      "keywords": [
-        "web3", "blockchain", "smart contract", "solidity", "ethereum",
-        "reentrancy", "integer overflow solidity", "ctf blockchain",
-        "foundry exploit", "hardhat", "remix", "evm", "defi exploit",
-        "flash loan", "delegatecall", "selfdestruct"
-      ]
-    },
-    {
-      "path": "payloads/open_redirect.md",
-      "keywords": [
-        "open redirect payload", "redirect bypass", "url bypass",
-        "phishing redirect", "redirect chain", "javascript redirect bypass"
-      ]
-    },
-    {
-      "path": "reconnaissance/favicon_hash.md",
-      "keywords": [
-        "favicon hash", "favicon fingerprint", "shodan favicon",
-        "favicon.ico hash", "mmh3 hash", "favicons recon"
-      ]
-    }
-  ]
+    "version": "1.0",
+    "description": "AIRecon community skills \u2014 keyword-to-skill mapping for auto-loading",
+    "skills": [
+        {
+            "path": "vulnerabilities/log4shell.md",
+            "keywords": [
+                "log4shell",
+                "log4j",
+                "jndi injection",
+                "cve-2021-44228",
+                "log4j rce",
+                "jndi ldap",
+                "jndi rmi",
+                "log4j2",
+                "log4j exploit"
+            ]
+        },
+        {
+            "path": "protocols/vnc.md",
+            "keywords": [
+                "vnc",
+                "virtual network computing",
+                "vnc brute",
+                "vnc exploit",
+                "rfb protocol",
+                "vnc authentication bypass",
+                "vnc scan"
+            ]
+        },
+        {
+            "path": "technologies/iot_firmware.md",
+            "keywords": [
+                "iot",
+                "firmware",
+                "firmware analysis",
+                "embedded",
+                "binwalk firmware",
+                "iot pentest",
+                "router exploit",
+                "firmware extraction",
+                "qemu emulation",
+                "iot security",
+                "embedded linux",
+                "busybox",
+                "upnp",
+                "soho"
+            ]
+        },
+        {
+            "path": "ctf/web3.md",
+            "keywords": [
+                "web3",
+                "blockchain",
+                "smart contract",
+                "solidity",
+                "ethereum",
+                "reentrancy",
+                "integer overflow solidity",
+                "ctf blockchain",
+                "foundry exploit",
+                "hardhat",
+                "remix",
+                "evm",
+                "defi exploit",
+                "flash loan",
+                "delegatecall",
+                "selfdestruct"
+            ]
+        },
+        {
+            "path": "payloads/open_redirect.md",
+            "keywords": [
+                "open redirect payload",
+                "redirect bypass",
+                "url bypass",
+                "phishing redirect",
+                "redirect chain",
+                "javascript redirect bypass"
+            ]
+        },
+        {
+            "path": "reconnaissance/favicon_hash.md",
+            "keywords": [
+                "favicon hash",
+                "favicon fingerprint",
+                "shodan favicon",
+                "favicon.ico hash",
+                "mmh3 hash",
+                "favicons recon"
+            ]
+        },
+        {
+            "path": "technologies/aws_pentest.md",
+            "keywords": [
+                "aws pentest",
+                "aws cloud",
+                "iam enumeration",
+                "s3 misconfiguration",
+                "ec2 metadata",
+                "pacu",
+                "cloudfox",
+                "scoutsuite",
+                "assume role",
+                "aws privilege escalation"
+            ]
+        },
+        {
+            "path": "postexploit/active_directory_chain.md",
+            "keywords": [
+                "active directory",
+                "ad chain",
+                "bloodhound",
+                "kerberoasting",
+                "asreproast",
+                "dcsync",
+                "golden ticket",
+                "domain dominance"
+            ]
+        },
+        {
+            "path": "technologies/kubernetes_pentest.md",
+            "keywords": [
+                "kubernetes",
+                "k8s",
+                "kubelet",
+                "etcd",
+                "rbac",
+                "kube-hunter",
+                "kube-bench",
+                "pod escape",
+                "service account"
+            ]
+        },
+        {
+            "path": "protocols/graphql_complex.md",
+            "keywords": [
+                "graphql",
+                "graphql api",
+                "graphql introspection",
+                "graphql schema",
+                "graphql batching",
+                "graphql complexity",
+                "graphql depth",
+                "graphql file upload",
+                "persisted query",
+                "apollo graphql"
+            ]
+        },
+        {
+            "path": "protocols/mssql.md",
+            "keywords": [
+                "mssql",
+                "sql server",
+                "xp_cmdshell",
+                "mssqlclient",
+                "linked server",
+                "ntlm hash",
+                "unc path"
+            ]
+        },
+        {
+            "path": "technologies/cicd_attacks.md",
+            "keywords": [
+                "cicd",
+                "ci/cd",
+                "github actions",
+                "gitlab ci",
+                "jenkins",
+                "pipeline poisoning",
+                "pull_request_target",
+                "oidc token",
+                "dependency confusion"
+            ]
+        },
+        {
+            "path": "vulnerabilities/blind_xss.md",
+            "keywords": [
+                "blind xss",
+                "bxss",
+                "oob xss",
+                "out of band xss",
+                "xss hunter",
+                "xsshunter",
+                "log xss"
+            ]
+        },
+        {
+            "path": "postexploit/credential_dumping.md",
+            "keywords": [
+                "credential dumping",
+                "lsass",
+                "mimikatz",
+                "secretsdump",
+                "ntds",
+                "sam hash",
+                "pypykatz",
+                "dpapi"
+            ]
+        },
+        {
+            "path": "vulnerabilities/prototype_pollution.md",
+            "keywords": [
+                "prototype pollution",
+                "__proto__",
+                "constructor.prototype",
+                "polluted",
+                "deepmerge",
+                "lodash merge",
+                "qs prototype pollution"
+            ]
+        },
+        {
+            "path": "vulnerabilities/spring4shell.md",
+            "keywords": [
+                "spring4shell",
+                "cve-2022-22965",
+                "spring rce",
+                "spring mvc rce",
+                "tomcat jsp"
+            ]
+        },
+        {
+            "path": "vulnerabilities/ssrf_advanced_bypass.md",
+            "keywords": [
+                "ssrf bypass",
+                "advanced ssrf",
+                "ssrf filter bypass",
+                "ssrf allowlist bypass",
+                "metadata ssrf",
+                "dns rebinding",
+                "ssrf ipv6",
+                "ssrf encoding"
+            ]
+        },
+        {
+            "path": "technologies/github_secrets.md",
+            "keywords": [
+                "github secrets",
+                "github token leak",
+                "github credential leak",
+                "github actions secrets",
+                "secret scanning",
+                "trufflehog github",
+                "gitleaks github",
+                "gh secrets"
+            ]
+        }
+    ]
 }

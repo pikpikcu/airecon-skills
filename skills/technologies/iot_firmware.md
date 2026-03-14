@@ -1,157 +1,127 @@
 # IoT / Firmware Security Analysis
 
 ## Overview
-Firmware analysis extracts and analyzes embedded device software to find hardcoded
-credentials, command injection, insecure defaults, and unauthenticated services.
+Firmware analysis extracts and inspects embedded device software to identify
+hardcoded credentials, command injection, insecure defaults, and exposed services.
 
-## Firmware Acquisition
+## Prerequisites
+```bash
+apt-get install -y binwalk squashfs-tools cramfs-tools jefferson qemu-user-static
+```
 
+## Phase 1: Firmware Acquisition
 ```bash
 # Direct download (vendor site / update mechanism)
-curl -O https://vendor.com/firmware-v1.2.3.bin
+curl -O https://VENDOR/firmware.bin
 
 # From device via UART/JTAG (hardware required)
 # From SPI/NAND flash chips
 
-# Via binwalk scan
-binwalk TARGET_FIRMWARE.bin
+# Quick file identification
+file TARGET_FIRMWARE.bin | tee /workspace/output/TARGET_firmware_fileinfo.txt
+```
+
+## Phase 2: Extraction & Filesystem Mapping
+```bash
+# Initial scan
+binwalk TARGET_FIRMWARE.bin | tee /workspace/output/TARGET_binwalk.txt
 
 # Extract filesystem
 binwalk -e TARGET_FIRMWARE.bin -C /workspace/output/firmware_extracted/
+
+# Unsquash if detected
+unsquashfs /workspace/output/firmware_extracted/squashfs-root.sqsh \
+  -d /workspace/output/firmware_unsquash/
 ```
 
-## Static Analysis
-
-### Filesystem Extraction
+## Phase 3: Credential & Secret Hunting
 ```bash
-# Install tools
-apt-get install -y binwalk squashfs-tools cramfs-tools jefferson
+# Find password files
+find /workspace/output/firmware_unsquash/ -name "passwd" -o -name "shadow" \
+  2>/dev/null | tee /workspace/output/TARGET_password_files.txt
 
-# Extract all nested archives
-binwalk --extract --recurse --depth 5 FIRMWARE.bin
-
-# Unsquash squashfs
-unsquashfs squashfs-root.sqsh
-```
-
-### Credential Hunting
-```bash
-# Find hardcoded passwords
-find . -name "passwd" -o -name "shadow" 2>/dev/null | xargs cat
-
-# Grep for credentials
-grep -rEi "(password|passwd|pwd|secret|token|api_key)\s*[:=]\s*['\"]?[^\s'\"]{4,}" . 2>/dev/null
+# Grep for common secret patterns
+rg -n "(password|passwd|pwd|secret|token|api_key)\s*[:=]" \
+  /workspace/output/firmware_unsquash/ \
+  > /workspace/output/TARGET_secret_grep.txt
 
 # Private keys
-find . -name "*.pem" -o -name "*.key" -o -name "*.rsa" 2>/dev/null
-
-# SSL certificates with private keys
-find . -name "*.crt" -exec grep -l "PRIVATE KEY" {} \;
-
-# Default credentials in web configs
-grep -rn "admin" . --include="*.conf" --include="*.cfg" --include="*.json" 2>/dev/null | head -30
+find /workspace/output/firmware_unsquash/ -name "*.pem" -o -name "*.key" \
+  -o -name "*.rsa" 2>/dev/null | tee /workspace/output/TARGET_private_keys.txt
 ```
 
-### Binary Analysis
+## Phase 4: Binary & Service Analysis
 ```bash
-# Check security mitigations
-checksec --file=BINARY
+# Find command execution sinks
+rg -n "system\(|popen\(|exec\(" /workspace/output/firmware_unsquash/ \
+  --glob "*.c" --glob "*.h" > /workspace/output/TARGET_cmd_sinks.txt
 
-# Find command injection sinks
-grep -rn "system\|popen\|exec" . --include="*.c" --include="*.h" 2>/dev/null
-strings BINARY | grep -E "(system|popen|/bin/sh)"
+# Identify embedded web servers
+find /workspace/output/firmware_unsquash/ -name "httpd" -o -name "lighttpd" \
+  -o -name "uhttpd" 2>/dev/null | tee /workspace/output/TARGET_web_binaries.txt
 
-# Find web server binaries
-find . -name "httpd" -o -name "lighttpd" -o -name "uhttpd" 2>/dev/null
-
-# Analyze with Ghidra (headless)
-ghidra_headless /tmp/ghidra_project FIRMWARE_ANALYSIS \
-  -import /workspace/output/firmware_extracted/bin/BINARY \
-  -postScript analyzeHeadless.java
+# Extract strings for quick triage
+strings /workspace/output/firmware_unsquash/**/bin/* 2>/dev/null | \
+  rg -n "http|admin|password" > /workspace/output/TARGET_strings_hits.txt
 ```
 
-## Emulation (Dynamic Analysis)
-
+## Phase 5: Emulation (Optional)
 ```bash
-# Install QEMU + firmwalker
-apt-get install -y qemu-user-static qemu-system-arm
-
-# Simple userspace emulation
-cp $(which qemu-arm-static) ./squashfs-root/usr/bin/
-chroot ./squashfs-root/ /bin/sh
-
-# Full system emulation with FirmAE
-git clone https://github.com/pr0v3rbs/FirmAE /workspace/FirmAE
-cd /workspace/FirmAE && ./download.sh && ./install.sh
-./run.sh -r BRAND FIRMWARE.bin
-
-# Firmwalker automated scan
-git clone https://github.com/craigz28/firmwalker /workspace/firmwalker
-cd /workspace/firmwalker && bash firmwalker.sh /path/to/squashfs-root/
+# Simple userspace emulation (if filesystem is complete)
+cp $(which qemu-arm-static) /workspace/output/firmware_unsquash/usr/bin/ 2>/dev/null
+chroot /workspace/output/firmware_unsquash/ /bin/sh
 ```
 
-## Network Services Analysis
-
+## Phase 6: Network Service Testing (Post-Emulation)
 ```bash
-# After emulation, scan internal services
-nmap -sV 192.168.0.1  # default gateway IP
+# Scan services after emulation
+nmap -sV TARGET_IP -oN /workspace/output/TARGET_iot_nmap.txt
 
-# Common IoT web admin ports
-curl -v http://192.168.0.1:80/
-curl -v http://192.168.0.1:8080/
-curl -v http://192.168.0.1:8443/
-
-# Telnet (often enabled by default)
-telnet 192.168.0.1
-
-# MQTT (IoT messaging protocol)
-mosquitto_sub -h 192.168.0.1 -t '#' -v
-
-# UPnP discovery
-upnp-inspector -i eth0
+# Common web admin ports
+curl -v http://TARGET_IP:80/ 2>&1 | tee /workspace/output/TARGET_iot_http_80.txt
+curl -v http://TARGET_IP:8080/ 2>&1 | tee /workspace/output/TARGET_iot_http_8080.txt
+curl -v https://TARGET_IP:8443/ 2>&1 | tee /workspace/output/TARGET_iot_http_8443.txt
 ```
 
-## Common Vulnerabilities
-
-### Command Injection via Web Interface
+## Common Vulnerabilities to Validate
 ```bash
-# Test form fields that might execute system commands
-curl -X POST http://192.168.0.1/ping.cgi \
-  -d "host=127.0.0.1;id;ls+/"
+# Command injection (example path)
+# curl -X POST http://TARGET_IP/ping.cgi -d "host=127.0.0.1;id"
 
-# Common injection parameters: ping_target, host, ip, domain
+# Default credentials (example)
+# admin:admin, admin:password, root:root
 ```
 
-### Hardcoded Backdoors
-```bash
-# Check for hardcoded admin users
-grep -rn "root\|admin\|backdoor" squashfs-root/etc/passwd 2>/dev/null
+## Report Template
 
-# Telnet backdoor services
-grep -rn "telnet\|backdoor" squashfs-root/etc/init.d/ 2>/dev/null
+```
+Target: TARGET_DEVICE
+Firmware: TARGET_FIRMWARE.bin
+Assessment Date: <DATE>
+
+## Confirmed Findings
+- [ ] Hardcoded credentials found
+- [ ] Private keys embedded in firmware
+- [ ] Command injection reachable via web interface
+- [ ] Exposed services with weak auth
+
+## Evidence
+- Binwalk: /workspace/output/TARGET_binwalk.txt
+- Secrets: /workspace/output/TARGET_secret_grep.txt
+- Services: /workspace/output/TARGET_iot_nmap.txt
+
+## Recommendations
+1. Remove secrets and keys from firmware images
+2. Enforce strong auth and disable default credentials
+3. Validate and sanitize all web interface inputs
+4. Disable unused services and block admin ports by default
 ```
 
-## Reporting Template
-```
-Target: [DEVICE MODEL / FIRMWARE VERSION]
-Attack Surface: [Web UI | Telnet | UART | API]
-
-Finding 1: Hardcoded Credentials
-  Location: /etc/passwd or /etc/config/xxx
-  Credentials: admin:PASSWORD
-  Impact: Full device compromise
-
-Finding 2: Command Injection
-  Endpoint: POST /cgi-bin/ping.cgi?host=
-  Payload: 127.0.0.1;id
-  Evidence: uid=0(root) gid=0(root)
-  Impact: RCE as root
-
-Remediation:
-  - Remove hardcoded credentials, use randomized defaults
-  - Validate/sanitize all user input before passing to shell
-  - Enable firmware signing and secure boot
-  - Disable telnet, use SSH only
-```
+## Output Files
+- `/workspace/output/TARGET_firmware_fileinfo.txt` — file identification
+- `/workspace/output/TARGET_binwalk.txt` — binwalk scan
+- `/workspace/output/TARGET_secret_grep.txt` — secret hits
+- `/workspace/output/TARGET_cmd_sinks.txt` — command sinks
+- `/workspace/output/TARGET_iot_nmap.txt` — service scan
 
 indicators: iot firmware embedded binwalk qemu
