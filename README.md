@@ -3,7 +3,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/AIRecon-compatible-green.svg">
-  <img src="https://img.shields.io/badge/skills-18-blue.svg">
+  <img src="https://img.shields.io/badge/skills-36-blue.svg">
   <img src="https://img.shields.io/badge/LICENSE-MIT-red.svg">
 </p>
 
@@ -60,9 +60,15 @@ from `skills.json`. Does not affect AIRecon's built-in skills.
 |-------|----------|---------|
 | `log4shell.md` | vulnerabilities | log4shell, log4j, jndi injection, CVE-2021-44228 |
 | `blind_xss.md` | vulnerabilities | blind xss, oob xss, xsshunter |
-| `prototype_pollution.md` | vulnerabilities | prototype pollution, __proto__, constructor.prototype |
 | `spring4shell.md` | vulnerabilities | spring4shell, CVE-2022-22965, tomcat jsp |
 | `ssrf_advanced_bypass.md` | vulnerabilities | ssrf bypass, metadata ssrf, dns rebinding |
+| `cache_deception.md` | vulnerabilities | cache deception, web cache deception, cdn cache |
+| `clickjacking.md` | vulnerabilities | clickjacking, ui redressing, x-frame-options |
+| `xs_leaks.md` | vulnerabilities | xs-leaks, cross-site leaks, timing attack |
+| `password_reset_poisoning.md` | vulnerabilities | password reset poisoning, host header injection |
+| `dom_based_vulnerabilities.md` | vulnerabilities | dom xss, dom clobbering, postmessage |
+| `web_llm_attacks.md` | vulnerabilities | web llm attacks, prompt injection, rag injection |
+| `exploit_validation.md` | vulnerabilities | exploit validation, vulnerability verification |
 | `vnc.md` | protocols | vnc, rfb, vnc brute, vnc exploit |
 | `mssql.md` | protocols | mssql, sql server, xp_cmdshell, linked server |
 | `graphql_complex.md` | protocols | graphql, introspection, batching, persisted query |
@@ -71,10 +77,22 @@ from `skills.json`. Does not affect AIRecon's built-in skills.
 | `cicd_attacks.md` | technologies | cicd, github actions, gitlab ci, jenkins |
 | `kubernetes_pentest.md` | technologies | kubernetes, k8s, kubelet, rbac |
 | `github_secrets.md` | technologies | github secrets, gitleaks, trufflehog, secret scanning |
+| `supabase_security.md` | technologies | supabase, postgrest, gotrue, rls |
+| `wordpress_security.md` | technologies | wordpress, wp-json, wpscan, xmlrpc |
+| `enterprise_web_pentest.md` | technologies | enterprise web pentest, web assessment workflow |
+| `config_hardening.md` | technologies | config hardening, security headers, tls hardening |
 | `web3.md` | ctf | web3, blockchain, smart contract, reentrancy |
 | `active_directory_chain.md` | postexploit | active directory, bloodhound, kerberoasting, dcsync |
 | `credential_dumping.md` | postexploit | credential dumping, lsass, mimikatz, ntds |
-| `open_redirect.md` | payloads | open redirect payload, redirect bypass |
+| `http_parameter_pollution.md` | payloads | http parameter pollution, hpp, duplicate parameters |
+| `csv_formula_injection.md` | payloads | csv injection, formula injection, excel injection |
+| `ldap_injection.md` | payloads | ldap injection, ldap filter injection |
+| `xpath_injection.md` | payloads | xpath injection, xml injection |
+| `ssi_injection.md` | payloads | ssi injection, server side include |
+| `redos.md` | payloads | redos, regex dos, catastrophic backtracking |
+| `subdomain_enum.md` | reconnaissance | subdomain enumeration, subfinder, amass |
+| `tech_stack_fingerprint.md` | reconnaissance | tech fingerprint, httpx, whatweb |
+| `cloud_asset_discovery.md` | reconnaissance | cloud asset discovery, s3 bucket discovery, cdn |
 | `favicon_hash.md` | reconnaissance | favicon hash, shodan favicon, mmh3 |
 
 ---

@@ -69,17 +69,6 @@
             ]
         },
         {
-            "path": "payloads/open_redirect.md",
-            "keywords": [
-                "open redirect payload",
-                "redirect bypass",
-                "url bypass",
-                "phishing redirect",
-                "redirect chain",
-                "javascript redirect bypass"
-            ]
-        },
-        {
             "path": "reconnaissance/favicon_hash.md",
             "keywords": [
                 "favicon hash",
@@ -199,18 +188,6 @@
             ]
         },
         {
-            "path": "vulnerabilities/prototype_pollution.md",
-            "keywords": [
-                "prototype pollution",
-                "__proto__",
-                "constructor.prototype",
-                "polluted",
-                "deepmerge",
-                "lodash merge",
-                "qs prototype pollution"
-            ]
-        },
-        {
             "path": "vulnerabilities/spring4shell.md",
             "keywords": [
                 "spring4shell",
@@ -244,6 +221,204 @@
                 "trufflehog github",
                 "gitleaks github",
                 "gh secrets"
+            ]
+        },
+        {
+            "path": "technologies/supabase_security.md",
+            "keywords": [
+                "supabase",
+                "postgrest",
+                "gotrue",
+                "supabase storage",
+                "supabase rls",
+                "supabase anon key"
+            ]
+        },
+        {
+            "path": "technologies/wordpress_security.md",
+            "keywords": [
+                "wordpress",
+                "wp-admin",
+                "wp-json",
+                "wpscan",
+                "xmlrpc",
+                "wordpress plugin"
+            ]
+        },
+        {
+            "path": "reconnaissance/subdomain_enum.md",
+            "keywords": [
+                "subdomain enumeration",
+                "subdomain enum",
+                "subfinder",
+                "amass",
+                "assetfinder",
+                "dns brute"
+            ]
+        },
+        {
+            "path": "reconnaissance/tech_stack_fingerprint.md",
+            "keywords": [
+                "tech fingerprint",
+                "technology fingerprint",
+                "httpx",
+                "whatweb",
+                "wappalyzer",
+                "stack detection"
+            ]
+        },
+        {
+            "path": "reconnaissance/cloud_asset_discovery.md",
+            "keywords": [
+                "cloud asset discovery",
+                "s3 bucket discovery",
+                "azure blob",
+                "gcp bucket",
+                "cloudfront",
+                "cdn discovery"
+            ]
+        },
+        {
+            "path": "payloads/http_parameter_pollution.md",
+            "keywords": [
+                "http parameter pollution",
+                "hpp",
+                "parameter pollution",
+                "duplicate parameters",
+                "array parameters"
+            ]
+        },
+        {
+            "path": "payloads/csv_formula_injection.md",
+            "keywords": [
+                "csv injection",
+                "formula injection",
+                "excel injection",
+                "spreadsheet injection",
+                "csv formula"
+            ]
+        },
+        {
+            "path": "payloads/ldap_injection.md",
+            "keywords": [
+                "ldap injection",
+                "ldap filter injection",
+                "directory injection",
+                "ldap wildcard"
+            ]
+        },
+        {
+            "path": "payloads/xpath_injection.md",
+            "keywords": [
+                "xpath injection",
+                "xml injection",
+                "xpath bypass",
+                "xpath payloads"
+            ]
+        },
+        {
+            "path": "payloads/ssi_injection.md",
+            "keywords": [
+                "ssi injection",
+                "server side include",
+                "shtml injection",
+                "ssi payloads"
+            ]
+        },
+        {
+            "path": "payloads/redos.md",
+            "keywords": [
+                "redos",
+                "regex dos",
+                "catastrophic backtracking",
+                "regex payloads"
+            ]
+        },
+        {
+            "path": "vulnerabilities/cache_deception.md",
+            "keywords": [
+                "cache deception",
+                "web cache deception",
+                "cdn cache",
+                "cache-control",
+                "x-cache"
+            ]
+        },
+        {
+            "path": "vulnerabilities/clickjacking.md",
+            "keywords": [
+                "clickjacking",
+                "ui redressing",
+                "x-frame-options",
+                "frame-ancestors"
+            ]
+        },
+        {
+            "path": "vulnerabilities/xs_leaks.md",
+            "keywords": [
+                "xs-leaks",
+                "cross-site leaks",
+                "timing attack",
+                "onload onerror",
+                "redirect leak"
+            ]
+        },
+        {
+            "path": "vulnerabilities/password_reset_poisoning.md",
+            "keywords": [
+                "password reset poisoning",
+                "reset link poisoning",
+                "host header injection",
+                "reset redirect"
+            ]
+        },
+        {
+            "path": "vulnerabilities/dom_based_vulnerabilities.md",
+            "keywords": [
+                "dom-based vulnerabilities",
+                "dom xss",
+                "dom clobbering",
+                "postmessage",
+                "client-side injection"
+            ]
+        },
+        {
+            "path": "vulnerabilities/web_llm_attacks.md",
+            "keywords": [
+                "web llm attacks",
+                "prompt injection",
+                "indirect prompt injection",
+                "rag injection",
+                "tool abuse",
+                "llm security"
+            ]
+        },
+        {
+            "path": "technologies/enterprise_web_pentest.md",
+            "keywords": [
+                "enterprise web pentest",
+                "web assessment workflow",
+                "pentest workflow",
+                "recon to report"
+            ]
+        },
+        {
+            "path": "technologies/config_hardening.md",
+            "keywords": [
+                "config hardening",
+                "security headers",
+                "tls hardening",
+                "debug endpoints",
+                "backup exposure"
+            ]
+        },
+        {
+            "path": "vulnerabilities/exploit_validation.md",
+            "keywords": [
+                "exploit validation",
+                "vulnerability verification",
+                "proof of concept",
+                "repro steps"
             ]
         }
     ]
