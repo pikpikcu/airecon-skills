@@ -420,6 +420,224 @@
                 "proof of concept",
                 "repro steps"
             ]
+        },
+        {
+            "path": "ctf/kernel_exploitation.md",
+            "keywords": [
+                "kernel exploitation",
+                "kernel ctf",
+                "ret2usr",
+                "krop",
+                "smep bypass",
+                "smap bypass",
+                "kernel rop",
+                "privilege escalation kernel",
+                "lpe kernel",
+                "cgroup escape",
+                "linux kernel exploit",
+                "kernel heap",
+                "commit_creds",
+                "prepare_kernel_cred"
+            ]
+        },
+        {
+            "path": "ctf/heap_advanced.md",
+            "keywords": [
+                "heap exploitation",
+                "tcache poisoning",
+                "fastbin dup",
+                "unsorted bin",
+                "largebin attack",
+                "house of orange",
+                "house of force",
+                "house of botcake",
+                "glibc heap",
+                "pwndbg heap",
+                "heap ctf",
+                "malloc exploit",
+                "libc leak heap"
+            ]
+        },
+        {
+            "path": "ctf/android_ctf.md",
+            "keywords": [
+                "android ctf",
+                "android reverse engineering",
+                "jadx",
+                "apktool",
+                "smali patching",
+                "android apk",
+                "android frida",
+                "adb root",
+                "android hook",
+                "dex decompile",
+                "android obfuscation"
+            ]
+        },
+        {
+            "path": "ctf/wasm_challenge.md",
+            "keywords": [
+                "wasm",
+                "webassembly",
+                "wasm ctf",
+                "wasm reverse engineering",
+                "wat format",
+                "wabt",
+                "wasm2wat",
+                "wasm2c",
+                "webassembly exploit",
+                "wasm binary"
+            ]
+        },
+        {
+            "path": "reconnaissance/shodan_censys.md",
+            "keywords": [
+                "shodan",
+                "censys",
+                "shodan search",
+                "censys search",
+                "asn enumeration",
+                "ip range discovery",
+                "internet scan",
+                "fofa",
+                "certificate transparency",
+                "crt.sh",
+                "shodan cli",
+                "censys api",
+                "passive recon"
+            ]
+        },
+        {
+            "path": "vulnerabilities/request_smuggling_advanced.md",
+            "keywords": [
+                "request smuggling",
+                "http smuggling",
+                "cl.te smuggling",
+                "te.cl smuggling",
+                "h2.cl smuggling",
+                "h2.te smuggling",
+                "http/2 desync",
+                "smuggler.py",
+                "turbo intruder smuggling",
+                "response queue poisoning",
+                "desync attack"
+            ]
+        },
+        {
+            "path": "vulnerabilities/interactsh_oob.md",
+            "keywords": [
+                "interactsh",
+                "oob detection",
+                "out of band",
+                "blind ssrf oob",
+                "blind rce oob",
+                "blind xxe oob",
+                "dns exfiltration",
+                "log4shell oob",
+                "blind sqli oob",
+                "oast",
+                "collaborator"
+            ]
+        },
+        {
+            "path": "postexploit/container_escape.md",
+            "keywords": [
+                "container escape",
+                "docker escape",
+                "privileged container",
+                "docker socket exploit",
+                "cgroup escape",
+                "nsenter",
+                "kubernetes escape",
+                "k8s pod escape",
+                "container breakout",
+                "docker breakout",
+                "release_agent cgroup"
+            ]
+        },
+        {
+            "path": "postexploit/bloodhound_ad.md",
+            "keywords": [
+                "bloodhound",
+                "bloodhound-python",
+                "attack path",
+                "ad enumeration",
+                "domain admin path",
+                "neo4j cypher",
+                "sharphound",
+                "bloodhound collection",
+                "ad attack path"
+            ]
+        },
+        {
+            "path": "postexploit/ad_credential_attacks.md",
+            "keywords": [
+                "kerberoasting",
+                "asreproasting",
+                "as-rep roast",
+                "dcsync",
+                "pass the hash",
+                "pass the ticket",
+                "silver ticket",
+                "golden ticket",
+                "impacket",
+                "ntlm relay",
+                "overpass the hash",
+                "active directory attacks",
+                "ad credentials",
+                "krbtgt hash"
+            ]
+        },
+        {
+            "path": "postexploit/netexec_workflow.md",
+            "keywords": [
+                "netexec",
+                "nxc",
+                "crackmapexec",
+                "cme",
+                "smb enumeration",
+                "password spraying",
+                "sam dump",
+                "lsass dump",
+                "lateral movement smb",
+                "winrm exploit",
+                "smb shares enum"
+            ]
+        },
+        {
+            "path": "technologies/frida_hooking.md",
+            "keywords": [
+                "frida",
+                "frida hooking",
+                "dynamic instrumentation",
+                "java hook",
+                "frida android",
+                "ssl pinning bypass",
+                "root detection bypass",
+                "frida interceptor",
+                "frida stalker",
+                "frida-trace",
+                "runtime hooking",
+                "apk hook"
+            ]
+        },
+        {
+            "path": "technologies/qemu_emulation.md",
+            "keywords": [
+                "qemu",
+                "qemu arm",
+                "qemu mips",
+                "cross architecture",
+                "firmware emulation",
+                "qemu chroot",
+                "qemu gdb",
+                "arm emulation",
+                "mips emulation",
+                "cross compile exploit",
+                "firmware chroot",
+                "binwalk extract",
+                "squashfs emulation"
+            ]
         }
     ]
 }
