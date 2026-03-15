@@ -638,6 +638,146 @@
                 "binwalk extract",
                 "squashfs emulation"
             ]
+        },
+        {
+            "path": "vulnerabilities/idor_exploitation.md",
+            "keywords": [
+                "idor",
+                "insecure direct object reference",
+                "idor exploitation",
+                "broken object level",
+                "bola",
+                "user enumeration idor",
+                "horizontal privilege escalation",
+                "vertical privilege escalation",
+                "mass assignment",
+                "object id manipulation",
+                "account takeover idor",
+                "uuid idor",
+                "numeric id fuzz"
+            ]
+        },
+        {
+            "path": "vulnerabilities/jwt_attacks.md",
+            "keywords": [
+                "jwt",
+                "json web token",
+                "jwt attack",
+                "alg none",
+                "algorithm confusion",
+                "rs256 hs256",
+                "jwt secret cracking",
+                "kid injection",
+                "jwk injection",
+                "jwt bypass",
+                "jwt forgery",
+                "jwt manipulation",
+                "jwt vulnerability"
+            ]
+        },
+        {
+            "path": "vulnerabilities/deserialization.md",
+            "keywords": [
+                "deserialization",
+                "insecure deserialization",
+                "java deserialization",
+                "php deserialization",
+                "python pickle",
+                "ysoserial",
+                "phpggc",
+                "gadget chain",
+                "object injection",
+                "pickle exploit",
+                "yaml deserialization",
+                "node serialize",
+                "rO0AB"
+            ]
+        },
+        {
+            "path": "vulnerabilities/business_logic.md",
+            "keywords": [
+                "business logic",
+                "race condition",
+                "price manipulation",
+                "coupon abuse",
+                "negative quantity",
+                "workflow bypass",
+                "payment bypass",
+                "gift card exploit",
+                "discount abuse",
+                "state machine bypass",
+                "checkout bypass",
+                "refund abuse"
+            ]
+        },
+        {
+            "path": "vulnerabilities/oauth_misconfig.md",
+            "keywords": [
+                "oauth",
+                "oauth2",
+                "openid connect",
+                "oidc",
+                "oauth misconfiguration",
+                "redirect uri bypass",
+                "state parameter bypass",
+                "authorization code leakage",
+                "pkce bypass",
+                "implicit flow",
+                "token endpoint",
+                "oauth account takeover",
+                "jwks endpoint"
+            ]
+        },
+        {
+            "path": "vulnerabilities/api_security.md",
+            "keywords": [
+                "api security",
+                "rest api",
+                "broken function level authorization",
+                "bfla",
+                "excessive data exposure",
+                "mass assignment api",
+                "api rate limiting",
+                "graphql security",
+                "api enumeration",
+                "swagger exposed",
+                "openapi exposed",
+                "api versioning",
+                "graphql introspection"
+            ]
+        },
+        {
+            "path": "technologies/nginx_misconfig.md",
+            "keywords": [
+                "nginx",
+                "nginx misconfiguration",
+                "nginx alias traversal",
+                "off by slash",
+                "merge slashes",
+                "nginx path traversal",
+                "nginx auth bypass",
+                "nginx proxy",
+                "nginx location bypass",
+                "nginx stub status"
+            ]
+        },
+        {
+            "path": "technologies/apache_misconfig.md",
+            "keywords": [
+                "apache",
+                "apache misconfiguration",
+                "mod_status",
+                "server-status",
+                "directory listing apache",
+                "htaccess bypass",
+                "htpasswd exposed",
+                "apache path traversal",
+                "cve-2021-41773",
+                "cve-2021-42013",
+                "shellshock",
+                "apache mod_rewrite bypass",
+                "apache version"
+            ]
         }
     ]
 }
