@@ -128,6 +128,18 @@ manifest.json           ← keyword → skill path mapping
 
 ---
 
+## Credits & Attribution
+
+Some skills in this repository are derived from third-party open-source projects:
+
+| Source | Author | License | Skills directory |
+|--------|--------|---------|-----------------|
+| [ljagiello/ctf-skills](https://github.com/ljagiello/ctf-skills) | [Lukasz Jagiello](https://github.com/ljagiello) | MIT | `skills/ctf/crypto/`, `skills/ctf/forensics/`, `skills/ctf/malware/`, `skills/ctf/misc/`, `skills/ctf/osint/`, `skills/ctf/pwn/`, `skills/ctf/reverse/`, `skills/ctf/web/` |
+
+Full attribution and reproduced license text: [`skills/ctf/CREDITS.md`](skills/ctf/CREDITS.md)
+
+---
+
 ## Disclaimer
 
 For authorized security testing and educational purposes only.
