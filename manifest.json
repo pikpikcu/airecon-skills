@@ -778,6 +778,988 @@
                 "apache mod_rewrite bypass",
                 "apache version"
             ]
+        },
+        {
+            "path": "ctf/crypto/rsa-attacks.md",
+            "keywords": [
+                "rsa attack",
+                "rsa ctf",
+                "rsa decrypt",
+                "small exponent attack",
+                "common modulus",
+                "wiener attack",
+                "hastad attack",
+                "rsa low exponent",
+                "factor rsa",
+                "rsa private key recovery",
+                "crt rsa",
+                "rsa pycryptodome"
+            ]
+        },
+        {
+            "path": "ctf/crypto/classic-ciphers.md",
+            "keywords": [
+                "classic cipher",
+                "caesar cipher",
+                "vigenere cipher",
+                "substitution cipher",
+                "rot13",
+                "atbash",
+                "affine cipher",
+                "playfair",
+                "railfence cipher",
+                "polyalphabetic",
+                "frequency analysis",
+                "cipher ctf"
+            ]
+        },
+        {
+            "path": "ctf/crypto/ecc-attacks.md",
+            "keywords": [
+                "ecc attack",
+                "elliptic curve ctf",
+                "ecdsa nonce reuse",
+                "invalid curve attack",
+                "pohlig hellman",
+                "discrete log ecc",
+                "secp256k1",
+                "curve25519 attack",
+                "ecdlp",
+                "smart attack ecc",
+                "singular curve"
+            ]
+        },
+        {
+            "path": "ctf/crypto/advanced-math.md",
+            "keywords": [
+                "lattice attack",
+                "lll algorithm",
+                "coppersmith attack",
+                "lattice ctf",
+                "hnp attack",
+                "hidden number problem",
+                "knapsack cipher",
+                "merkle hellman",
+                "gcd attack",
+                "continued fraction",
+                "fp polynomial"
+            ]
+        },
+        {
+            "path": "ctf/crypto/modern-ciphers.md",
+            "keywords": [
+                "aes ctf",
+                "aes ecb",
+                "aes cbc",
+                "padding oracle",
+                "bit flipping attack",
+                "ctr mode attack",
+                "aes gcm nonce reuse",
+                "stream cipher ctf",
+                "rc4 attack",
+                "salsa20",
+                "chacha20",
+                "block cipher ctf"
+            ]
+        },
+        {
+            "path": "ctf/crypto/prng.md",
+            "keywords": [
+                "prng attack",
+                "mersenne twister",
+                "mt19937 crack",
+                "lcg attack",
+                "linear congruential generator",
+                "random seed prediction",
+                "python random crack",
+                "xorshift",
+                "glibc rand",
+                "prng ctf",
+                "random state recovery"
+            ]
+        },
+        {
+            "path": "ctf/crypto/historical.md",
+            "keywords": [
+                "enigma cipher",
+                "lorenz cipher",
+                "one time pad ctf",
+                "otp reuse",
+                "classical cryptanalysis",
+                "historical cipher",
+                "beaufort cipher",
+                "kasiski test",
+                "index of coincidence",
+                "columnar transposition"
+            ]
+        },
+        {
+            "path": "ctf/crypto/exotic-crypto.md",
+            "keywords": [
+                "exotic crypto",
+                "homomorphic encryption ctf",
+                "paillier cryptosystem",
+                "mceliece",
+                "lattice based crypto",
+                "post quantum crypto ctf",
+                "zero knowledge ctf",
+                "commitment scheme",
+                "secret sharing",
+                "shamir secret sharing"
+            ]
+        },
+        {
+            "path": "ctf/crypto/zkp-and-advanced.md",
+            "keywords": [
+                "zero knowledge proof ctf",
+                "zkp ctf",
+                "zk snark",
+                "bulletproofs",
+                "schnorr protocol",
+                "fiat shamir",
+                "interactive proof",
+                "non interactive proof",
+                "sigma protocol",
+                "groth16"
+            ]
+        },
+        {
+            "path": "ctf/forensics/steganography.md",
+            "keywords": [
+                "steganography ctf",
+                "steghide",
+                "stegsolve",
+                "lsb steganography",
+                "image steganography",
+                "audio steganography",
+                "binwalk stego",
+                "zsteg",
+                "outguess",
+                "jsteg",
+                "stego ctf",
+                "hidden data image"
+            ]
+        },
+        {
+            "path": "ctf/forensics/stego-advanced.md",
+            "keywords": [
+                "advanced steganography",
+                "dct steganography",
+                "f5 steganography",
+                "jphide",
+                "palette manipulation",
+                "png chunk hidden",
+                "metadata exif hidden",
+                "wav steganography",
+                "mp3 stego",
+                "spectogram hidden",
+                "sonic visualizer"
+            ]
+        },
+        {
+            "path": "ctf/forensics/network.md",
+            "keywords": [
+                "pcap analysis",
+                "wireshark ctf",
+                "network forensics ctf",
+                "tcp stream",
+                "dns forensics",
+                "http traffic analysis",
+                "tshark ctf",
+                "network capture",
+                "packet analysis ctf",
+                "ftp traffic"
+            ]
+        },
+        {
+            "path": "ctf/forensics/network-advanced.md",
+            "keywords": [
+                "advanced pcap",
+                "tls decryption ctf",
+                "ssl keylog",
+                "scapy forensics",
+                "covert channel network",
+                "dns tunneling forensics",
+                "icmp covert",
+                "custom protocol forensics",
+                "zeek forensics",
+                "network anomaly ctf"
+            ]
+        },
+        {
+            "path": "ctf/forensics/disk-and-memory.md",
+            "keywords": [
+                "disk forensics ctf",
+                "memory forensics ctf",
+                "volatility ctf",
+                "memory dump analysis",
+                "ram dump ctf",
+                "process memory",
+                "hibernation file",
+                "pagefile analysis",
+                "autopsy ctf",
+                "sleuthkit"
+            ]
+        },
+        {
+            "path": "ctf/forensics/disk-recovery.md",
+            "keywords": [
+                "disk recovery ctf",
+                "file carving",
+                "foremost ctf",
+                "deleted file recovery",
+                "ext4 forensics",
+                "fat32 forensics",
+                "ntfs forensics",
+                "mft analysis",
+                "photorec ctf",
+                "testdisk ctf"
+            ]
+        },
+        {
+            "path": "ctf/forensics/linux-forensics.md",
+            "keywords": [
+                "linux forensics ctf",
+                "bash history forensics",
+                "linux log analysis",
+                "cron forensics",
+                "systemd forensics",
+                "proc forensics",
+                "inode forensics",
+                "linux artifact",
+                "shell history ctf",
+                "linux timeline"
+            ]
+        },
+        {
+            "path": "ctf/forensics/windows.md",
+            "keywords": [
+                "windows forensics ctf",
+                "registry forensics",
+                "windows event log ctf",
+                "prefetch forensics",
+                "lnk file forensics",
+                "mft forensics",
+                "shimcache",
+                "amcache",
+                "srum forensics",
+                "windows artifact ctf"
+            ]
+        },
+        {
+            "path": "ctf/forensics/3d-printing.md",
+            "keywords": [
+                "3d printing ctf",
+                "stl forensics",
+                "gcode analysis",
+                "3d model hidden data",
+                "additive manufacturing ctf",
+                "3d file forensics"
+            ]
+        },
+        {
+            "path": "ctf/forensics/signals-and-hardware.md",
+            "keywords": [
+                "signal analysis ctf",
+                "sdr ctf",
+                "radio forensics",
+                "hardware forensics",
+                "jtag forensics",
+                "uart forensics",
+                "logic analyzer ctf",
+                "signal decoding ctf",
+                "rtl sdr ctf",
+                "gnuradio ctf"
+            ]
+        },
+        {
+            "path": "ctf/malware/pe-and-dotnet.md",
+            "keywords": [
+                "pe analysis ctf",
+                "malware analysis ctf",
+                "dotnet malware",
+                "pe reverse",
+                "portable executable ctf",
+                "dnspy",
+                "dotnet decompile",
+                "pe header analysis",
+                "malware static analysis",
+                "peid ctf"
+            ]
+        },
+        {
+            "path": "ctf/malware/scripts-and-obfuscation.md",
+            "keywords": [
+                "obfuscated script ctf",
+                "powershell obfuscation",
+                "javascript obfuscation ctf",
+                "vba macro ctf",
+                "python obfuscation ctf",
+                "deobfuscation",
+                "base64 malware",
+                "packed malware",
+                "malware deobfuscate",
+                "script malware analysis"
+            ]
+        },
+        {
+            "path": "ctf/malware/c2-and-protocols.md",
+            "keywords": [
+                "c2 analysis ctf",
+                "command and control ctf",
+                "malware c2 protocol",
+                "beacon analysis",
+                "cobalt strike beacon",
+                "malware network traffic",
+                "c2 callback",
+                "dns c2 ctf",
+                "http c2 ctf",
+                "malware protocol reverse"
+            ]
+        },
+        {
+            "path": "ctf/misc/pyjails.md",
+            "keywords": [
+                "pyjail ctf",
+                "python jail",
+                "python sandbox escape",
+                "restricted python",
+                "python breakout",
+                "builtins bypass python",
+                "exec eval jail",
+                "python jail escape",
+                "jail ctf python",
+                "getattr bypass"
+            ]
+        },
+        {
+            "path": "ctf/misc/bashjails.md",
+            "keywords": [
+                "bash jail ctf",
+                "bash restricted shell",
+                "rbash escape",
+                "shell jail escape",
+                "bash sandbox",
+                "command injection jail",
+                "bash filter bypass",
+                "awk shell escape",
+                "vi shell escape",
+                "bash jail bypass"
+            ]
+        },
+        {
+            "path": "ctf/misc/encodings.md",
+            "keywords": [
+                "encoding ctf",
+                "base64 ctf",
+                "base32 ctf",
+                "base58",
+                "base85",
+                "hex encoding ctf",
+                "binary encoding ctf",
+                "morse code ctf",
+                "encoding decode ctf",
+                "url encoding ctf",
+                "unicode encoding ctf"
+            ]
+        },
+        {
+            "path": "ctf/misc/dns.md",
+            "keywords": [
+                "dns ctf",
+                "dns challenge",
+                "dns exfiltration ctf",
+                "dns tunneling ctf",
+                "txt record ctf",
+                "dns rebinding ctf",
+                "dns zone transfer ctf",
+                "dnscat",
+                "dns covert channel"
+            ]
+        },
+        {
+            "path": "ctf/misc/games-and-vms.md",
+            "keywords": [
+                "game ctf",
+                "vm ctf",
+                "virtual machine ctf",
+                "game hacking ctf",
+                "unity ctf",
+                "vm escape ctf",
+                "hypervisor ctf",
+                "game reverse ctf",
+                "save file ctf",
+                "game cheat ctf"
+            ]
+        },
+        {
+            "path": "ctf/misc/games-and-vms-2.md",
+            "keywords": [
+                "advanced game ctf",
+                "vm escape advanced",
+                "qemu ctf",
+                "kvm ctf",
+                "virtualbox ctf",
+                "game binary exploit",
+                "custom vm bytecode",
+                "vm bytecode reverse",
+                "esoteric language ctf",
+                "brainfuck ctf"
+            ]
+        },
+        {
+            "path": "ctf/misc/linux-privesc.md",
+            "keywords": [
+                "linux privilege escalation ctf",
+                "privesc ctf",
+                "suid exploit ctf",
+                "sudo bypass ctf",
+                "cron privesc",
+                "writable service ctf",
+                "capabilities exploit",
+                "path hijacking ctf",
+                "linux escalation ctf",
+                "gtfobins ctf"
+            ]
+        },
+        {
+            "path": "ctf/misc/rf-sdr.md",
+            "keywords": [
+                "rf ctf",
+                "sdr ctf",
+                "software defined radio ctf",
+                "radio frequency ctf",
+                "rtl sdr ctf",
+                "gnuradio ctf",
+                "frequency analysis ctf",
+                "am fm ctf",
+                "rf signal ctf",
+                "hackrf ctf"
+            ]
+        },
+        {
+            "path": "ctf/osint/web-and-dns.md",
+            "keywords": [
+                "osint web ctf",
+                "osint dns ctf",
+                "domain osint",
+                "whois osint",
+                "certificate transparency osint",
+                "passive dns osint",
+                "subdomain osint",
+                "web archive osint",
+                "shodan osint ctf",
+                "censys osint"
+            ]
+        },
+        {
+            "path": "ctf/osint/social-media.md",
+            "keywords": [
+                "social media osint ctf",
+                "twitter osint ctf",
+                "instagram osint ctf",
+                "linkedin osint ctf",
+                "username osint",
+                "social network osint",
+                "profile osint ctf",
+                "sherlock osint",
+                "maigret osint",
+                "social osint ctf"
+            ]
+        },
+        {
+            "path": "ctf/osint/geolocation-and-media.md",
+            "keywords": [
+                "geolocation ctf",
+                "osint geolocation",
+                "image geolocation",
+                "exif osint",
+                "google maps osint",
+                "photo metadata osint",
+                "geoguessr ctf",
+                "reverse image search osint",
+                "street view osint",
+                "video osint"
+            ]
+        },
+        {
+            "path": "ctf/pwn/overflow-basics.md",
+            "keywords": [
+                "buffer overflow ctf",
+                "bof ctf",
+                "stack overflow ctf",
+                "ret2win",
+                "overflow basic",
+                "gets overflow",
+                "strcpy overflow",
+                "pwntools overflow",
+                "32bit overflow",
+                "simple overflow ctf"
+            ]
+        },
+        {
+            "path": "ctf/pwn/rop-and-shellcode.md",
+            "keywords": [
+                "rop chain ctf",
+                "rop ctf",
+                "shellcode ctf",
+                "ret2libc",
+                "ret2plt",
+                "ret2csu",
+                "rop gadget ctf",
+                "shellcode injection",
+                "nx bypass ctf",
+                "pwntools rop"
+            ]
+        },
+        {
+            "path": "ctf/pwn/rop-advanced.md",
+            "keywords": [
+                "advanced rop ctf",
+                "srop ctf",
+                "sigreturn rop",
+                "jop ctf",
+                "cop ctf",
+                "blind rop",
+                "brop ctf",
+                "rop without libc",
+                "one gadget",
+                "magic gadget"
+            ]
+        },
+        {
+            "path": "ctf/pwn/format-string.md",
+            "keywords": [
+                "format string ctf",
+                "printf vulnerability ctf",
+                "format string exploit",
+                "%n format string",
+                "arbitrary write format string",
+                "got overwrite format string",
+                "stack read format string",
+                "pwntools fmtstr",
+                "format string leak"
+            ]
+        },
+        {
+            "path": "ctf/pwn/advanced.md",
+            "keywords": [
+                "advanced pwn ctf",
+                "heap exploitation ctf",
+                "use after free ctf",
+                "double free ctf",
+                "fastbin attack",
+                "tcache poisoning",
+                "house of force",
+                "house of orange",
+                "glibc heap ctf",
+                "malloc exploit"
+            ]
+        },
+        {
+            "path": "ctf/pwn/advanced-exploits.md",
+            "keywords": [
+                "advanced exploit ctf",
+                "heap spray ctf",
+                "type confusion ctf",
+                "integer overflow ctf",
+                "off by one heap",
+                "uninitialized memory",
+                "race condition pwn",
+                "uaf ctf",
+                "arbitrary free ctf",
+                "exploit primitive ctf"
+            ]
+        },
+        {
+            "path": "ctf/pwn/advanced-exploits-2.md",
+            "keywords": [
+                "advanced exploit ctf 2",
+                "vtable overwrite",
+                "c++ exploit ctf",
+                "cpp vtable",
+                "exit hook exploit",
+                "io file exploit",
+                "file structure exploit",
+                "fsop exploit",
+                "environ leak",
+                "tls dtor exploit"
+            ]
+        },
+        {
+            "path": "ctf/pwn/kernel.md",
+            "keywords": [
+                "kernel pwn ctf",
+                "kernel exploit ctf",
+                "lkm exploit",
+                "kernel module ctf",
+                "linux kernel ctf",
+                "cred overwrite",
+                "kernel rop ctf",
+                "qemu kernel ctf",
+                "kernel heap ctf",
+                "kernel uaf ctf"
+            ]
+        },
+        {
+            "path": "ctf/pwn/kernel-techniques.md",
+            "keywords": [
+                "kernel technique ctf",
+                "ret2usr",
+                "smep bypass",
+                "smap bypass",
+                "kaslr bypass",
+                "kernel stack pivot",
+                "modprobe path",
+                "userfaultfd ctf",
+                "kernel spray",
+                "kbase leak"
+            ]
+        },
+        {
+            "path": "ctf/pwn/kernel-bypass.md",
+            "keywords": [
+                "kernel mitigation bypass",
+                "kpti bypass",
+                "seccomp bypass ctf",
+                "prctl seccomp",
+                "kernel sandbox escape",
+                "cfi kernel bypass",
+                "ebpf exploit ctf",
+                "io uring ctf",
+                "dirtycow",
+                "dirty pipe"
+            ]
+        },
+        {
+            "path": "ctf/pwn/sandbox-escape.md",
+            "keywords": [
+                "sandbox escape ctf",
+                "seccomp escape ctf",
+                "container escape ctf",
+                "docker escape ctf",
+                "chrome sandbox escape",
+                "browser sandbox ctf",
+                "wasm sandbox escape",
+                "seccomp filter bypass",
+                "ptrace escape",
+                "namespace escape"
+            ]
+        },
+        {
+            "path": "ctf/reverse/tools.md",
+            "keywords": [
+                "reverse engineering tools ctf",
+                "ghidra ctf",
+                "ida pro ctf",
+                "radare2 ctf",
+                "binary ninja ctf",
+                "angr ctf",
+                "static analysis ctf",
+                "disassembler ctf",
+                "reverse tool ctf",
+                "decompiler ctf"
+            ]
+        },
+        {
+            "path": "ctf/reverse/tools-dynamic.md",
+            "keywords": [
+                "dynamic analysis ctf",
+                "gdb ctf",
+                "x64dbg ctf",
+                "frida ctf",
+                "pin ctf",
+                "dtrace ctf",
+                "ltrace ctf",
+                "strace ctf",
+                "dynamic reverse ctf",
+                "runtime analysis ctf"
+            ]
+        },
+        {
+            "path": "ctf/reverse/tools-advanced.md",
+            "keywords": [
+                "advanced reverse tool ctf",
+                "symbolic execution ctf",
+                "angr symbolic ctf",
+                "qiling ctf",
+                "unicorn ctf",
+                "triton ctf",
+                "taint analysis ctf",
+                "concolic execution",
+                "z3 reverse ctf",
+                "smt solver ctf"
+            ]
+        },
+        {
+            "path": "ctf/reverse/patterns.md",
+            "keywords": [
+                "reverse pattern ctf",
+                "crackme ctf",
+                "license check reverse",
+                "serial key reverse",
+                "checksum reverse",
+                "encoding reverse ctf",
+                "custom encoding reverse",
+                "flag check reverse",
+                "input validation reverse",
+                "algorithm reverse ctf"
+            ]
+        },
+        {
+            "path": "ctf/reverse/patterns-ctf.md",
+            "keywords": [
+                "ctf reverse pattern",
+                "obfuscated binary ctf",
+                "anti debug ctf",
+                "vm obfuscation reverse",
+                "control flow obfuscation",
+                "junk code reverse",
+                "self modifying code",
+                "packed binary reverse",
+                "upx unpack ctf",
+                "binary obfuscation ctf"
+            ]
+        },
+        {
+            "path": "ctf/reverse/patterns-ctf-2.md",
+            "keywords": [
+                "advanced ctf reverse pattern",
+                "custom vm reverse",
+                "bytecode reverse",
+                "llvm ir reverse",
+                "intermediate representation reverse",
+                "custom interpreter reverse",
+                "esoteric bytecode ctf",
+                "vm protection reverse",
+                "themida reverse",
+                "vmp reverse"
+            ]
+        },
+        {
+            "path": "ctf/reverse/languages.md",
+            "keywords": [
+                "interpreted language reverse ctf",
+                "python bytecode ctf",
+                "pyc decompile",
+                "java reverse ctf",
+                "jar decompile ctf",
+                "kotlin reverse ctf",
+                "ruby reverse ctf",
+                "php reverse ctf",
+                "lua reverse ctf",
+                "decompile bytecode ctf"
+            ]
+        },
+        {
+            "path": "ctf/reverse/languages-compiled.md",
+            "keywords": [
+                "compiled language reverse ctf",
+                "rust reverse ctf",
+                "go reverse ctf",
+                "golang binary reverse",
+                "swift reverse ctf",
+                "c++ reverse ctf",
+                "nim reverse ctf",
+                "zig reverse ctf",
+                "compiled binary reverse",
+                "stripped binary ctf"
+            ]
+        },
+        {
+            "path": "ctf/reverse/platforms.md",
+            "keywords": [
+                "platform reverse ctf",
+                "android apk reverse",
+                "apk decompile ctf",
+                "ios reverse ctf",
+                "macos reverse ctf",
+                "windows reverse ctf",
+                "arm reverse ctf",
+                "mips reverse ctf",
+                "embedded reverse ctf",
+                "cross platform reverse"
+            ]
+        },
+        {
+            "path": "ctf/reverse/anti-analysis.md",
+            "keywords": [
+                "anti analysis ctf",
+                "anti debug reverse",
+                "anti disassembly ctf",
+                "ptrace detection",
+                "timing attack detection",
+                "isdebuggerpresent",
+                "debugger detection ctf",
+                "anti vm ctf",
+                "environment detection ctf",
+                "sandbox detection ctf"
+            ]
+        },
+        {
+            "path": "ctf/web/server-side.md",
+            "keywords": [
+                "web ctf server side",
+                "sqli ctf",
+                "sql injection ctf",
+                "lfi ctf",
+                "local file inclusion ctf",
+                "rfi ctf",
+                "command injection ctf",
+                "xxe ctf",
+                "ssti ctf",
+                "server side injection ctf"
+            ]
+        },
+        {
+            "path": "ctf/web/server-side-advanced.md",
+            "keywords": [
+                "advanced server side ctf",
+                "ssrf ctf",
+                "blind sqli ctf",
+                "nosql injection ctf",
+                "graphql injection ctf",
+                "ssti jinja2 ctf",
+                "ssti twig ctf",
+                "ssti freemarker",
+                "ldap injection ctf",
+                "xpath injection ctf"
+            ]
+        },
+        {
+            "path": "ctf/web/server-side-exec.md",
+            "keywords": [
+                "rce ctf",
+                "remote code execution ctf",
+                "rce web ctf",
+                "php rce ctf",
+                "python rce ctf",
+                "deserialization rce ctf",
+                "log4j ctf",
+                "shellshock ctf",
+                "code injection ctf",
+                "eval injection ctf"
+            ]
+        },
+        {
+            "path": "ctf/web/server-side-deser.md",
+            "keywords": [
+                "deserialization ctf",
+                "java deserialization ctf",
+                "php unserialize ctf",
+                "pickle deserialization ctf",
+                "ruby marshal ctf",
+                "ysoserial ctf",
+                "gadget chain ctf",
+                "object injection ctf",
+                "phar deserialization",
+                "net deserialization ctf"
+            ]
+        },
+        {
+            "path": "ctf/web/client-side.md",
+            "keywords": [
+                "xss ctf",
+                "cross site scripting ctf",
+                "client side ctf",
+                "csp bypass ctf",
+                "dom xss ctf",
+                "reflected xss ctf",
+                "stored xss ctf",
+                "xss filter bypass ctf",
+                "clickjacking ctf",
+                "csrf ctf"
+            ]
+        },
+        {
+            "path": "ctf/web/auth-and-access.md",
+            "keywords": [
+                "authentication ctf",
+                "access control ctf",
+                "idor ctf",
+                "broken auth ctf",
+                "session fixation ctf",
+                "cookie manipulation ctf",
+                "oauth ctf",
+                "sso ctf",
+                "privilege escalation web ctf",
+                "forced browsing ctf"
+            ]
+        },
+        {
+            "path": "ctf/web/auth-jwt.md",
+            "keywords": [
+                "jwt ctf",
+                "json web token ctf",
+                "jwt algorithm confusion",
+                "jwt none algorithm",
+                "jwt secret crack",
+                "jwt kid injection",
+                "jwks ctf",
+                "jwt header injection",
+                "jwt signature bypass",
+                "alg none jwt"
+            ]
+        },
+        {
+            "path": "ctf/web/auth-infra.md",
+            "keywords": [
+                "auth infrastructure ctf",
+                "saml ctf",
+                "saml injection",
+                "oidc ctf",
+                "openid ctf",
+                "ldap auth ctf",
+                "kerberos ctf",
+                "ntlm ctf",
+                "auth bypass infrastructure",
+                "azure ad ctf"
+            ]
+        },
+        {
+            "path": "ctf/web/node-and-prototype.md",
+            "keywords": [
+                "prototype pollution ctf",
+                "nodejs ctf",
+                "javascript prototype pollution",
+                "node js rce ctf",
+                "npm prototype pollution",
+                "lodash prototype pollution",
+                "express ctf",
+                "nodejs ssti ctf",
+                "vm2 escape",
+                "nodejs sandbox escape"
+            ]
+        },
+        {
+            "path": "ctf/web/cves.md",
+            "keywords": [
+                "cve web ctf",
+                "known vulnerability ctf",
+                "cve exploit ctf",
+                "web cve challenge",
+                "wordpress ctf",
+                "drupal ctf",
+                "joomla ctf",
+                "struts ctf",
+                "rails ctf",
+                "django ctf"
+            ]
+        },
+        {
+            "path": "ctf/web/web3.md",
+            "keywords": [
+                "web3 ctf",
+                "smart contract ctf",
+                "solidity ctf",
+                "ethereum ctf",
+                "reentrancy ctf",
+                "overflow solidity ctf",
+                "selfdestruct ctf",
+                "delegatecall ctf",
+                "evm ctf",
+                "foundry ctf"
+            ]
         }
     ]
 }
