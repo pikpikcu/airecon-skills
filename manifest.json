@@ -1,6 +1,6 @@
 {
     "version": "1.0",
-    "description": "AIRecon community skills \u2014 keyword-to-skill mapping for auto-loading",
+    "description": "AIRecon community skills — keyword-to-skill mapping for auto-loading",
     "skills": [
         {
             "path": "vulnerabilities/log4shell.md",
@@ -80,34 +80,6 @@
             ]
         },
         {
-            "path": "technologies/aws_pentest.md",
-            "keywords": [
-                "aws pentest",
-                "aws cloud",
-                "iam enumeration",
-                "s3 misconfiguration",
-                "ec2 metadata",
-                "pacu",
-                "cloudfox",
-                "scoutsuite",
-                "assume role",
-                "aws privilege escalation"
-            ]
-        },
-        {
-            "path": "postexploit/active_directory_chain.md",
-            "keywords": [
-                "active directory",
-                "ad chain",
-                "bloodhound",
-                "kerberoasting",
-                "asreproast",
-                "dcsync",
-                "golden ticket",
-                "domain dominance"
-            ]
-        },
-        {
             "path": "technologies/kubernetes_pentest.md",
             "keywords": [
                 "kubernetes",
@@ -119,21 +91,6 @@
                 "kube-bench",
                 "pod escape",
                 "service account"
-            ]
-        },
-        {
-            "path": "protocols/graphql_complex.md",
-            "keywords": [
-                "graphql",
-                "graphql api",
-                "graphql introspection",
-                "graphql schema",
-                "graphql batching",
-                "graphql complexity",
-                "graphql depth",
-                "graphql file upload",
-                "persisted query",
-                "apollo graphql"
             ]
         },
         {
@@ -155,7 +112,6 @@
                 "ci/cd",
                 "github actions",
                 "gitlab ci",
-                "jenkins",
                 "pipeline poisoning",
                 "pull_request_target",
                 "oidc token",
@@ -198,59 +154,10 @@
             ]
         },
         {
-            "path": "vulnerabilities/ssrf_advanced_bypass.md",
-            "keywords": [
-                "ssrf bypass",
-                "advanced ssrf",
-                "ssrf filter bypass",
-                "ssrf allowlist bypass",
-                "metadata ssrf",
-                "dns rebinding",
-                "ssrf ipv6",
-                "ssrf encoding"
-            ]
-        },
-        {
-            "path": "technologies/github_secrets.md",
-            "keywords": [
-                "github secrets",
-                "github token leak",
-                "github credential leak",
-                "github actions secrets",
-                "secret scanning",
-                "trufflehog github",
-                "gitleaks github",
-                "gh secrets"
-            ]
-        },
-        {
-            "path": "technologies/supabase_security.md",
-            "keywords": [
-                "supabase",
-                "postgrest",
-                "gotrue",
-                "supabase storage",
-                "supabase rls",
-                "supabase anon key"
-            ]
-        },
-        {
-            "path": "technologies/wordpress_security.md",
-            "keywords": [
-                "wordpress",
-                "wp-admin",
-                "wp-json",
-                "wpscan",
-                "xmlrpc",
-                "wordpress plugin"
-            ]
-        },
-        {
             "path": "reconnaissance/subdomain_enum.md",
             "keywords": [
                 "subdomain enumeration",
                 "subdomain enum",
-                "subfinder",
                 "amass",
                 "assetfinder",
                 "dns brute"
@@ -368,7 +275,6 @@
             "keywords": [
                 "password reset poisoning",
                 "reset link poisoning",
-                "host header injection",
                 "reset redirect"
             ]
         },
@@ -463,10 +369,7 @@
             "keywords": [
                 "android ctf",
                 "android reverse engineering",
-                "jadx",
-                "apktool",
                 "smali patching",
-                "android apk",
                 "android frida",
                 "adb root",
                 "android hook",
@@ -492,7 +395,6 @@
         {
             "path": "reconnaissance/shodan_censys.md",
             "keywords": [
-                "shodan",
                 "censys",
                 "shodan search",
                 "censys search",
@@ -500,27 +402,9 @@
                 "ip range discovery",
                 "internet scan",
                 "fofa",
-                "certificate transparency",
-                "crt.sh",
                 "shodan cli",
                 "censys api",
                 "passive recon"
-            ]
-        },
-        {
-            "path": "vulnerabilities/request_smuggling_advanced.md",
-            "keywords": [
-                "request smuggling",
-                "http smuggling",
-                "cl.te smuggling",
-                "te.cl smuggling",
-                "h2.cl smuggling",
-                "h2.te smuggling",
-                "http/2 desync",
-                "smuggler.py",
-                "turbo intruder smuggling",
-                "response queue poisoning",
-                "desync attack"
             ]
         },
         {
@@ -572,15 +456,10 @@
         {
             "path": "postexploit/ad_credential_attacks.md",
             "keywords": [
-                "kerberoasting",
                 "asreproasting",
                 "as-rep roast",
                 "dcsync",
                 "pass the hash",
-                "pass the ticket",
-                "silver ticket",
-                "golden ticket",
-                "impacket",
                 "ntlm relay",
                 "overpass the hash",
                 "active directory attacks",
@@ -640,24 +519,6 @@
             ]
         },
         {
-            "path": "vulnerabilities/idor_exploitation.md",
-            "keywords": [
-                "idor",
-                "insecure direct object reference",
-                "idor exploitation",
-                "broken object level",
-                "bola",
-                "user enumeration idor",
-                "horizontal privilege escalation",
-                "vertical privilege escalation",
-                "mass assignment",
-                "object id manipulation",
-                "account takeover idor",
-                "uuid idor",
-                "numeric id fuzz"
-            ]
-        },
-        {
             "path": "vulnerabilities/jwt_attacks.md",
             "keywords": [
                 "jwt",
@@ -673,41 +534,6 @@
                 "jwt forgery",
                 "jwt manipulation",
                 "jwt vulnerability"
-            ]
-        },
-        {
-            "path": "vulnerabilities/deserialization.md",
-            "keywords": [
-                "deserialization",
-                "insecure deserialization",
-                "java deserialization",
-                "php deserialization",
-                "python pickle",
-                "ysoserial",
-                "phpggc",
-                "gadget chain",
-                "object injection",
-                "pickle exploit",
-                "yaml deserialization",
-                "node serialize",
-                "rO0AB"
-            ]
-        },
-        {
-            "path": "vulnerabilities/business_logic.md",
-            "keywords": [
-                "business logic",
-                "race condition",
-                "price manipulation",
-                "coupon abuse",
-                "negative quantity",
-                "workflow bypass",
-                "payment bypass",
-                "gift card exploit",
-                "discount abuse",
-                "state machine bypass",
-                "checkout bypass",
-                "refund abuse"
             ]
         },
         {
@@ -729,45 +555,10 @@
             ]
         },
         {
-            "path": "vulnerabilities/api_security.md",
-            "keywords": [
-                "api security",
-                "rest api",
-                "broken function level authorization",
-                "bfla",
-                "excessive data exposure",
-                "mass assignment api",
-                "api rate limiting",
-                "graphql security",
-                "api enumeration",
-                "swagger exposed",
-                "openapi exposed",
-                "api versioning",
-                "graphql introspection"
-            ]
-        },
-        {
-            "path": "technologies/nginx_misconfig.md",
-            "keywords": [
-                "nginx",
-                "nginx misconfiguration",
-                "nginx alias traversal",
-                "off by slash",
-                "merge slashes",
-                "nginx path traversal",
-                "nginx auth bypass",
-                "nginx proxy",
-                "nginx location bypass",
-                "nginx stub status"
-            ]
-        },
-        {
             "path": "technologies/apache_misconfig.md",
             "keywords": [
-                "apache",
                 "apache misconfiguration",
                 "mod_status",
-                "server-status",
                 "directory listing apache",
                 "htaccess bypass",
                 "htpasswd exposed",
@@ -782,7 +573,6 @@
         {
             "path": "ctf/crypto/rsa-attacks.md",
             "keywords": [
-                "rsa attack",
                 "rsa ctf",
                 "rsa decrypt",
                 "small exponent attack",
@@ -927,13 +717,11 @@
             "path": "ctf/forensics/steganography.md",
             "keywords": [
                 "steganography ctf",
-                "steghide",
                 "stegsolve",
                 "lsb steganography",
                 "image steganography",
                 "audio steganography",
                 "binwalk stego",
-                "zsteg",
                 "outguess",
                 "jsteg",
                 "stego ctf",
@@ -1205,21 +993,6 @@
                 "vm bytecode reverse",
                 "esoteric language ctf",
                 "brainfuck ctf"
-            ]
-        },
-        {
-            "path": "ctf/misc/linux-privesc.md",
-            "keywords": [
-                "linux privilege escalation ctf",
-                "privesc ctf",
-                "suid exploit ctf",
-                "sudo bypass ctf",
-                "cron privesc",
-                "writable service ctf",
-                "capabilities exploit",
-                "path hijacking ctf",
-                "linux escalation ctf",
-                "gtfobins ctf"
             ]
         },
         {
